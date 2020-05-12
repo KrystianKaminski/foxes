@@ -49,9 +49,9 @@ body {
 }
 
 .form-view {
-    box-shadow: 10px 10px 45px 0 rgba(0, 0, 0, .25);
+    box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, .25);
     border-radius: 5px;
-    height: 70vh;
+    height: 55vh;
     width: 70%;
     margin: 50px auto 0;
 }
@@ -60,12 +60,14 @@ body {
     font-size: 24px;
     margin-left: 30px;
     padding-top: 20px;
+    text-align: center;
 }
 
 .form-view__question {
     font-size: 22px;
     margin-top: 20px;
     margin-left: 30px;
+    text-align: center;
 }
 
 .form-view__input {
@@ -74,6 +76,10 @@ body {
     margin-top: 30px;
     position: relative;
     display: flex;
+}
+
+.form-view__input--text {
+    margin: 40px auto;
 }
 
 .text-input {
@@ -107,15 +113,91 @@ body {
 
 .form-view__input--gender {
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .form-view__gender {
     width: 35%;
+    padding: 5px;
     border: 2px solid #ccc;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-view__gender--active {
+    border-color: #097AFF;
 }
 
 .form-view__gender img {
     max-width: 100%;
     display: block;
+}
+
+.form-view__text {
+    text-align: center;
+    margin: 15px 0 10px;
+    font-weight: bold;
+}
+
+.cta-container {
+    width: 70%;
+    height: 10vh;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.cta .button {
+    max-width: 100%;
+    display: block;
+    height: 45px;
+}
+
+.cta__question-mark {
+    margin: auto 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #097AFF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.cta__again::after {
+    content: 'Od nowa';
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cta__back::after {
+    content: 'Wstecz';
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cta__next::after {
+    content: 'Następny';
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
