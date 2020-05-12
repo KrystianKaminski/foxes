@@ -47,3 +47,75 @@ body {
 .step-line__dot--active {
     background-color: #097AFF;
 }
+
+.form-view {
+    box-shadow: 10px 10px 45px 0 rgba(0, 0, 0, .25);
+    border-radius: 5px;
+    height: 70vh;
+    width: 70%;
+    margin: 50px auto 0;
+}
+
+.form-view__title {
+    font-size: 24px;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.form-view__question {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.form-view__input {
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+}
+
+.text-input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 2px solid #eee;
+    display: block;
+    font-size: 16px;
+    color: #097AFF;
+}
+
+.text-input:focus {
+    border-color: #097AFF;
+}
+
+.form-view__input--text::after {
+    content: 'Wpisz imię';
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    text-align: center;
+    height: 5px;
+    width: 15%;
+    font-size: 12px;
+    padding: 10px;
+    color: #097AFF;
+    background-color: white;
+    font-weight: bold;
+}
+
+.form-view__input--gender {
+    justify-content: space-between;
+}
+
+.form-view__gender {
+    width: 35%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-view__gender img {
+    max-width: 100%;
+    display: block;
+}
