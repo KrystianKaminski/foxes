@@ -1,0 +1,196 @@
+@import 'mixins';
+@import 'variables';
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  margin-top: 80px;
+  width: 900px;
+}
+
+.logo-box {
+  width: 25vh;
+  margin-left: 40px;
+
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.heading {
+  margin-left: auto;
+  margin-top: 20px;
+  font-size: 32px;
+  letter-spacing: 1.1px;
+}
+
+.step-line {
+  margin-top: 25px;
+  width: 100%;
+  height: 3px;
+  background-color: $base-grey-color;
+  display: flex;
+  justify-content: space-between;
+
+  &__dot {
+    width: 15px;
+    height: 15px;
+    background-color: $base-grey-color;
+    border-radius: 50%;
+    transform: translateY(-40%);
+
+    &--active {
+      background-color: $basic-blue-color;
+    }
+  }
+
+}
+
+.form-view {
+  box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 55vh;
+  width: 70%;
+  margin: 50px auto 0;
+
+  &__title {
+    font-size: 24px;
+    margin-left: 30px;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  &__question {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-align: center;
+  }
+
+  &__input {
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+
+    &--text {
+      margin: 40px auto;
+
+      &::after {
+        content: "Wpisz imię";
+        position: absolute;
+        top: -15px;
+        left: 30px;
+        text-align: center;
+        height: 5px;
+        width: 15%;
+        font-size: 12px;
+        padding: 10px;
+        color: $basic-blue-color;
+        background-color: white;
+        font-weight: bold;
+      }
+    }
+
+    &--gender {
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+  }
+
+  &__gender {
+    width: 35%;
+    padding: 5px;
+    border: 2px solid $base-grey-color;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &--active {
+      border-color: $basic-blue-color;
+    }
+
+    & img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin: 15px 0 10px;
+    font-weight: bold;
+  }
+}
+
+.text-input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 2px solid $light-grey-color;
+  display: block;
+  font-size: 16px;
+  color: $basic-blue-color;
+
+  &:focus {
+    border-color: $basic-blue-color;
+  }
+}
+
+.cta-container {
+  width: 70%;
+  height: 10vh;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+
+  & .button {
+    max-width: 100%;
+    display: block;
+    height: 45px;
+  }
+}
+
+
+.cta__question-mark {
+  margin: auto 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: $basic-blue-color;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.cta__again::after {
+  content: "Od nowa";
+  @include button-text;
+}
+
+.cta__back::after {
+  content: "Wstecz";
+  @include button-text;
+}
+
+.cta__next::after {
+  content: "Następny";
+  @include button-text;
+}
