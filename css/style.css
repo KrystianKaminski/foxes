@@ -48,6 +48,25 @@ body {
       background-position: center center;
       background-repeat: no-repeat;
       color: white; }
+    .step-line__dot--answer {
+      transform: none;
+      height: 20px;
+      width: 20px; }
+    .step-line__dot--refuse {
+      position: relative; }
+      .step-line__dot--refuse::after {
+        content: 'X';
+        color: white;
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+.answer-text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 15px; }
 
 .form-view {
   box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
@@ -67,7 +86,11 @@ body {
   .form-view__question {
     font-size: 22px;
     margin-top: 20px;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: space-evenly; }
   .form-view__input {
     width: 50%;
     margin-left: 30px;
@@ -123,6 +146,22 @@ body {
     .form-view__image-img {
       display: block;
       max-width: 100%; }
+  .form-view__answers {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center; }
+  .form-view__answer {
+    width: 40%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center; }
+    .form-view__answer--active {
+      border: 3px solid #097aff; }
 
 .image-box {
   width: 40%;
