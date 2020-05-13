@@ -106,7 +106,7 @@ body {
 
   &__gender {
     width: 35%;
-    padding: 5px;
+    padding: 15px;
     border: 2px solid $base-grey-color;
     border-radius: 5px;
     cursor: pointer;
@@ -125,6 +125,7 @@ body {
     text-align: center;
     margin: 15px 0 10px;
     font-weight: bold;
+    line-height: 25px;
   }
 }
 

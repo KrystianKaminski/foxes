@@ -80,7 +80,7 @@ body {
       margin: 0 auto; }
   .form-view__gender {
     width: 35%;
-    padding: 5px;
+    padding: 15px;
     border: 2px solid #ccc;
     border-radius: 5px;
     cursor: pointer; }
@@ -92,7 +92,8 @@ body {
   .form-view__text {
     text-align: center;
     margin: 15px 0 10px;
-    font-weight: bold; }
+    font-weight: bold;
+    line-height: 25px; }
 
 .text-input {
   width: 100%;
