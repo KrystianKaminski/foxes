@@ -101,6 +101,7 @@ body {
   border: 2px solid #eee;
   display: block;
   font-size: 16px;
+  padding: 0 10px;
   color: #097aff; }
   .text-input:focus {
     border-color: #097aff; }

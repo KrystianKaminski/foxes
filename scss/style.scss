@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'variables';
+@import "mixins";
+@import "variables";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -49,7 +49,6 @@ body {
       background-color: $basic-blue-color;
     }
   }
-
 }
 
 .form-view {
@@ -136,6 +135,7 @@ body {
   border: 2px solid $light-grey-color;
   display: block;
   font-size: 16px;
+  padding: 0 10px;
   color: $basic-blue-color;
 
   &:focus {
@@ -165,7 +165,6 @@ body {
     height: 45px;
   }
 }
-
 
 .cta__question-mark {
   margin: auto 0;
