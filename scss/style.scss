@@ -56,7 +56,7 @@ body {
       background-color: $basic-blue-color;
       width: 20px;
       height: 20px;
-      background-size: 70%;
+      background-size: 50%;
       background-position: center center;
       background-repeat: no-repeat;
       color: white;
@@ -67,13 +67,15 @@ body {
 .form-view {
   box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  height: 55vh;
+  height: auto;
+  padding-bottom: 30px;
   width: 70%;
   margin: 50px auto 0;
 
   &__title {
     font-size: 24px;
     margin-left: 30px;
+    margin-bottom: 20px;
     padding-top: 20px;
     text-align: center;
   }
@@ -81,7 +83,6 @@ body {
   &__question {
     font-size: 22px;
     margin-top: 20px;
-    margin-left: 30px;
     text-align: center;
   }
 
@@ -139,6 +140,15 @@ body {
     margin: 15px 0 10px;
     font-weight: bold;
     line-height: 25px;
+  }
+}
+
+.image-box {
+  width: 40%;
+  margin: 30px auto 0;
+  &__image {
+    max-width: 100%;
+    display: block;
   }
 }
 
