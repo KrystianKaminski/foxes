@@ -47,6 +47,19 @@ body {
 
     &--active {
       background-color: $basic-blue-color;
+      width: 25px;
+      height: 25px;
+    }
+
+    &--done {
+      background: url("../img/fajka.png");
+      background-color: $basic-blue-color;
+      width: 20px;
+      height: 20px;
+      background-size: 70%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: white;
     }
   }
 }

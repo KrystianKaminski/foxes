@@ -36,7 +36,18 @@ body {
     border-radius: 50%;
     transform: translateY(-40%); }
     .step-line__dot--active {
-      background-color: #097aff; }
+      background-color: #097aff;
+      width: 25px;
+      height: 25px; }
+    .step-line__dot--done {
+      background: url("../img/fajka.png");
+      background-color: #097aff;
+      width: 20px;
+      height: 20px;
+      background-size: 70%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: white; }
 
 .form-view {
   box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
