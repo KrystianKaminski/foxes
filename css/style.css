@@ -4,6 +4,10 @@ body {
   width: 1200px;
   margin: 0 auto; }
 
+sup {
+  vertical-align: super;
+  font-size: smaller; }
+
 .header {
   display: flex;
   margin-top: 80px;
@@ -152,6 +156,13 @@ body {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center; }
+    .form-view__answers--multiple {
+      flex-direction: column;
+      width: 80%;
+      flex-basis: 250px; }
+      .form-view__answers--multiple > .form-view__answer {
+        justify-content: flex-start;
+        align-items: center; }
   .form-view__answer {
     width: 40%;
     border: 1px solid #ccc;
@@ -162,6 +173,21 @@ body {
     justify-content: center; }
     .form-view__answer--active {
       border: 3px solid #097aff; }
+  .form-view__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative; }
+  .form-view__active-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #097aff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .image-box {
   width: 40%;
