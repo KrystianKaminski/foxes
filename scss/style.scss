@@ -99,12 +99,16 @@ sup {
 .form-view {
   box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  height: 520px;
+  height: 600px;
   padding-bottom: 30px;
-  width: 70%;
+  width: 80%;
   margin: 50px auto 0;
   position: relative;
   z-index: 4;
+
+  &--final {
+    background: linear-gradient(45deg, $basic-blue-color, white);
+  }
 
   &__title {
     font-size: 24px;
@@ -112,6 +116,10 @@ sup {
     margin-bottom: 20px;
     padding-top: 20px;
     text-align: center;
+
+    &--final {
+      color: white;
+    }
   }
 
   &__question {
@@ -122,6 +130,13 @@ sup {
     flex-direction: column;
     height: inherit;
     justify-content: space-evenly;
+
+    &--final {
+      height: 75%;
+      justify-content: flex-start;
+      background-color: $basic-blue-color;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
   }
 
   &__input {
@@ -258,6 +273,59 @@ sup {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  &__greetings-box {
+    margin-left: 50px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 40%;
+    background-color: $darker-blue-color;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__greetings-text {
+    color: white;
+    font-size: 12px;
+    padding: 0 15px;
+  }
+
+  &__greetings-icon-box {
+    height: 25px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: $light-green-color;
+  }
+
+  &__greetings-icon {
+    background: url('../img/smile.png');
+    background-size: 45%;
+    background-repeat: no-repeat;
+    height: 25px;
+    background-position: center center;
+  }
+
+  &__summary {
+    margin-top: 20px;
+    width: 60%;
+
+    &-title {
+      color: white;
+      font-size: 36px;
+      text-align: left;
+      padding: 0 30px;
+    }
+
+    &-subtitle {
+      margin-top: 20px;
+      color: white;
+      font-size: 18px;
+      text-align: left;
+      padding: 0 30px;
+      width: 80%;
+    }
+  }
 }
 
 .card {
@@ -271,14 +339,38 @@ sup {
   flex-direction: column;
   justify-content: space-around;
 
+  &--final {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    background-color: white;
+    justify-content: flex-start;
+  }
+
+  &--small {
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    top: 28%;
+    right: 3%;
+    background-color: white;
+    justify-content: flex-start;
+  }
+
   &--central {
     width: 35%;
     height: 400px;
     border: 3px solid $basic-blue-color;
   }
 
+  &--active {
+    border: 3px solid $basic-blue-color;
+  }
+
   &__title {
-    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px 20px 0;
   }
 
   &__text {
@@ -290,6 +382,14 @@ sup {
     height: 50px;
     width: 100px;
     margin: 30px auto;
+
+    &--final {
+      width: 250px;
+    }
+
+    &--small {
+      width: 50px;
+    }
 
     & img {
       max-width: 100%;
@@ -395,6 +495,18 @@ sup {
   font-size: 30px;
 }
 
+.cta__download {
+  width: 250px;
+  z-index: 3;
+  position: absolute;
+  padding: 0 30px;
+  transform: translateY(-50px);
+
+  & .button {
+    height: 70px;
+  }
+}
+
 .cta__again::after {
   content: "Od nowa";
   @include button-text;
@@ -408,4 +520,9 @@ sup {
 .cta__next::after {
   content: "Następny";
   @include button-text;
+}
+
+.cta__download::after {
+  content: "Pobierz";
+  @include button-text
 }
