@@ -104,11 +104,6 @@ sup {
   width: 80%;
   margin: 50px auto 0;
   position: relative;
-  z-index: 4;
-
-  &--final {
-    background: linear-gradient(45deg, $basic-blue-color, white);
-  }
 
   &__title {
     font-size: 24px;
@@ -198,21 +193,32 @@ sup {
   &__image {
     width: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
 
     &--right {
-      right: -40%;
+      right: -30%;
       top: 50%;
       transform: translateY(-50%);
+      ;
+
+      &>img {
+        animation: .3s linear .3s alternate animate-from-right;
+      }
     }
 
     &--left {
-      left: -40%;
+      left: -30%;
       top: 50%;
       transform: translateY(-50%);
+      animation: .3s linear .3s alternate animate-from-left;
+
+      &>img {
+        animation: .3s linear .3s alternate animate-from-left;
+      }
     }
 
     &-img {
+      z-index: -1;
       display: block;
       max-width: 100%;
     }
@@ -525,4 +531,32 @@ sup {
 .cta__download::after {
   content: "Pobierz";
   @include button-text
+}
+
+@keyframes animate-from-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes animate-from-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
 }
