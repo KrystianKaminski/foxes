@@ -198,22 +198,21 @@ sup {
     &--right {
       right: -30%;
       top: 50%;
-      transform: translateY(-50%);
-      ;
+      transform: translateY(-50%) translateX(150%);
+
 
       &>img {
-        animation: .3s linear .3s alternate animate-from-right;
+        animation: 1s ease-in .2s forwards animate-from-right;
       }
     }
 
     &--left {
       left: -30%;
       top: 50%;
-      transform: translateY(-50%);
-      animation: .3s linear .3s alternate animate-from-left;
+      transform: translateY(-50%) translateX(-150%);
 
       &>img {
-        animation: .3s linear .3s alternate animate-from-left;
+        animation: 1s ease-in .2s forwards animate-from-left;
       }
     }
 
@@ -447,6 +446,7 @@ sup {
   &__image {
     max-width: 100%;
     display: block;
+    animation: 1s ease-in .2s forwards animate-from-bottom;
   }
 }
 
@@ -535,13 +535,13 @@ sup {
 
 @keyframes animate-from-left {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
     opacity: 0;
     visibility: hidden;
   }
 
   to {
-    transform: translateX(0%);
+    transform: translateX(150%);
     opacity: 1;
     visibility: visible;
   }
@@ -549,14 +549,24 @@ sup {
 
 @keyframes animate-from-right {
   from {
-    transform: translateX(100%);
+    transform: translateX(150%);
     opacity: 0;
     visibility: hidden;
   }
 
   to {
-    transform: translateX(0%);
+    transform: translateX(-150%);
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@keyframes animate-from-bottom {
+  from {
+    transform: translateY(200%)
+  }
+
+  to {
+    transform: translateY(0%)
   }
 }
