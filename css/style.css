@@ -4,6 +4,10 @@ body {
   width: 1200px;
   margin: 0 auto; }
 
+sup {
+  vertical-align: super;
+  font-size: smaller; }
+
 .header {
   display: flex;
   margin-top: 80px;
@@ -36,24 +40,67 @@ body {
     border-radius: 50%;
     transform: translateY(-40%); }
     .step-line__dot--active {
-      background-color: #097aff; }
+      background-color: #097aff;
+      width: 25px;
+      height: 25px; }
+    .step-line__dot--done {
+      background: url("../img/fajka.png");
+      background-color: #097aff;
+      width: 20px;
+      height: 20px;
+      background-size: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: white; }
+    .step-line__dot--answer {
+      transform: none;
+      height: 20px;
+      width: 20px; }
+    .step-line__dot--refuse {
+      position: relative; }
+      .step-line__dot--refuse::after {
+        content: 'X';
+        color: white;
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+.answer-text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 15px; }
 
 .form-view {
   box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  height: 55vh;
-  width: 70%;
-  margin: 50px auto 0; }
+  height: 600px;
+  padding-bottom: 30px;
+  width: 80%;
+  margin: 50px auto 0;
+  position: relative; }
   .form-view__title {
     font-size: 24px;
     margin-left: 30px;
+    margin-bottom: 20px;
     padding-top: 20px;
     text-align: center; }
+    .form-view__title--final {
+      color: white; }
   .form-view__question {
     font-size: 22px;
     margin-top: 20px;
-    margin-left: 30px;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: space-evenly; }
+    .form-view__question--final {
+      height: 75%;
+      justify-content: flex-start;
+      background-color: #097aff;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
   .form-view__input {
     width: 50%;
     margin-left: 30px;
@@ -80,7 +127,7 @@ body {
       margin: 0 auto; }
   .form-view__gender {
     width: 35%;
-    padding: 5px;
+    padding: 15px;
     border: 2px solid #ccc;
     border-radius: 5px;
     cursor: pointer; }
@@ -92,7 +139,193 @@ body {
   .form-view__text {
     text-align: center;
     margin: 15px 0 10px;
-    font-weight: bold; }
+    font-weight: bold;
+    line-height: 25px; }
+  .form-view__image {
+    width: 50%;
+    position: absolute;
+    z-index: -1; }
+    .form-view__image--right {
+      right: -30%;
+      top: 50%;
+      transform: translateY(-50%) translateX(150%); }
+      .form-view__image--right > img {
+        animation: 1s ease-in .2s forwards animate-from-right; }
+    .form-view__image--left {
+      left: -30%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-150%); }
+      .form-view__image--left > img {
+        animation: 1s ease-in .2s forwards animate-from-left; }
+    .form-view__image-img {
+      z-index: -1;
+      display: block;
+      max-width: 100%; }
+  .form-view__answers {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center; }
+    .form-view__answers--multiple {
+      flex-direction: column;
+      width: 80%;
+      flex-basis: 250px; }
+      .form-view__answers--multiple > .form-view__answer {
+        justify-content: flex-start;
+        align-items: center; }
+    .form-view__answers--card {
+      width: 95%; }
+  .form-view__answer {
+    width: 40%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center; }
+    .form-view__answer--active {
+      border: 3px solid #097aff; }
+  .form-view__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative; }
+  .form-view__active-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #097aff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .form-view__greetings-box {
+    margin-left: 50px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 40%;
+    background-color: #0862c9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; }
+  .form-view__greetings-text {
+    color: white;
+    font-size: 12px;
+    padding: 0 15px; }
+  .form-view__greetings-icon-box {
+    height: 25px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: #0AD488; }
+  .form-view__greetings-icon {
+    background: url("../img/smile.png");
+    background-size: 45%;
+    background-repeat: no-repeat;
+    height: 25px;
+    background-position: center center; }
+  .form-view__summary {
+    margin-top: 20px;
+    width: 60%; }
+    .form-view__summary-title {
+      color: white;
+      font-size: 36px;
+      text-align: left;
+      padding: 0 30px; }
+    .form-view__summary-subtitle {
+      margin-top: 20px;
+      color: white;
+      font-size: 18px;
+      text-align: left;
+      padding: 0 30px;
+      width: 80%; }
+
+.card {
+  height: 350px;
+  width: 30%;
+  border: 2px solid #ccc;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .card--final {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    background-color: white;
+    justify-content: flex-start; }
+  .card--small {
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    top: 28%;
+    right: 3%;
+    background-color: white;
+    justify-content: flex-start; }
+  .card--central {
+    width: 35%;
+    height: 400px;
+    border: 3px solid #097aff; }
+  .card--active {
+    border: 3px solid #097aff; }
+  .card__title {
+    font-size: 22px;
+    text-align: center;
+    padding: 20px 20px 0; }
+  .card__text {
+    font-size: 14px;
+    padding: 0 10px; }
+  .card__image {
+    height: 50px;
+    width: 100px;
+    margin: 30px auto; }
+    .card__image--final {
+      width: 250px; }
+    .card__image--small {
+      width: 50px; }
+    .card__image img {
+      max-width: 100%;
+      display: block; }
+  .card__button {
+    height: 50px;
+    width: 50px;
+    border: 3px solid #ccc;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; }
+    .card__button--active {
+      height: 40px;
+      width: 40px;
+      background-color: #097aff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .card__button--inactive {
+      height: 40px;
+      width: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.image-box {
+  width: 40%;
+  margin: 30px auto 0; }
+  .image-box__image {
+    max-width: 100%;
+    display: block;
+    animation: 1s ease-in .2s forwards animate-from-bottom; }
 
 .text-input {
   width: 100%;
@@ -137,6 +370,15 @@ body {
   align-items: center;
   font-size: 30px; }
 
+.cta__download {
+  width: 250px;
+  z-index: 3;
+  position: absolute;
+  padding: 0 30px;
+  transform: translateY(-50px); }
+  .cta__download .button {
+    height: 70px; }
+
 .cta__again::after {
   content: "Od nowa";
   position: absolute;
@@ -160,3 +402,37 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+.cta__download::after {
+  content: "Pobierz";
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+@keyframes animate-from-left {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    transform: translateX(150%);
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes animate-from-right {
+  from {
+    transform: translateX(150%);
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    transform: translateX(-150%);
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes animate-from-bottom {
+  from {
+    transform: translateY(200%); }
+  to {
+    transform: translateY(0%); } }
