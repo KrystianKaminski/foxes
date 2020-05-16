@@ -10,7 +10,6 @@ body {
 sup {
   vertical-align: super;
   font-size: smaller;
-  ;
 }
 
 .header {
@@ -78,7 +77,7 @@ sup {
       position: relative;
 
       &::after {
-        content: 'X';
+        content: "X";
         color: white;
         font-size: 14px;
         position: absolute;
@@ -169,9 +168,8 @@ sup {
   &__gender {
     width: 35%;
     padding: 15px;
-    border: 2px solid $base-grey-color;
-    border-radius: 5px;
     cursor: pointer;
+    position: relative;
 
     &--active {
       border-color: $basic-blue-color;
@@ -200,9 +198,8 @@ sup {
       top: 50%;
       transform: translateY(-50%) translateX(150%);
 
-
-      &>img {
-        animation: 1s ease-in .2s forwards animate-from-right;
+      & > img {
+        animation: 1s ease-in 0.2s forwards animate-from-right;
       }
     }
 
@@ -211,8 +208,8 @@ sup {
       top: 50%;
       transform: translateY(-50%) translateX(-150%);
 
-      &>img {
-        animation: 1s ease-in .2s forwards animate-from-left;
+      & > img {
+        animation: 1s ease-in 0.2s forwards animate-from-left;
       }
     }
 
@@ -235,7 +232,7 @@ sup {
       width: 80%;
       flex-basis: 250px;
 
-      &>.form-view__answer {
+      & > .form-view__answer {
         justify-content: flex-start;
         align-items: center;
       }
@@ -248,16 +245,12 @@ sup {
 
   &__answer {
     width: 40%;
-    border: 1px solid $base-grey-color;
     padding: 10px;
     cursor: pointer;
     border-radius: 3px;
     display: flex;
     justify-content: center;
-
-    &--active {
-      border: 3px solid $basic-blue-color;
-    }
+    position: relative;
   }
 
   &__circle {
@@ -304,7 +297,7 @@ sup {
   }
 
   &__greetings-icon {
-    background: url('../img/smile.png');
+    background: url("../img/smile.png");
     background-size: 45%;
     background-repeat: no-repeat;
     height: 25px;
@@ -336,13 +329,13 @@ sup {
 .card {
   height: 350px;
   width: 30%;
-  border: 2px solid $base-grey-color;
   position: relative;
   z-index: 1;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 
   &--final {
     position: absolute;
@@ -365,11 +358,6 @@ sup {
   &--central {
     width: 35%;
     height: 400px;
-    border: 3px solid $basic-blue-color;
-  }
-
-  &--active {
-    border: 3px solid $basic-blue-color;
   }
 
   &__title {
@@ -438,7 +426,6 @@ sup {
   }
 }
 
-
 .image-box {
   width: 40%;
   margin: 30px auto 0;
@@ -446,7 +433,7 @@ sup {
   &__image {
     max-width: 100%;
     display: block;
-    animation: 1s ease-in .2s forwards animate-from-bottom;
+    animation: 1s ease-in 0.2s forwards animate-from-bottom;
   }
 }
 
@@ -530,7 +517,7 @@ sup {
 
 .cta__download::after {
   content: "Pobierz";
-  @include button-text
+  @include button-text;
 }
 
 @keyframes animate-from-left {
@@ -563,10 +550,29 @@ sup {
 
 @keyframes animate-from-bottom {
   from {
-    transform: translateY(200%)
+    transform: translateY(200%);
   }
 
   to {
-    transform: translateY(0%)
+    transform: translateY(0%);
   }
+}
+
+input[type="checkbox" i] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid $base-grey-color;
+  border-radius: 5px;
+}
+
+input:checked {
+  border: 2px solid $basic-blue-color;
 }
