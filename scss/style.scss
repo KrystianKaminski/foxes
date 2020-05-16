@@ -14,7 +14,7 @@ sup {
 
 .header {
   display: flex;
-  margin-top: 80px;
+  margin-top: 40px 0;
   width: 900px;
 }
 
@@ -96,13 +96,15 @@ sup {
 }
 
 .form-view {
-  box-shadow: 10px 5px 15px 0 rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   height: 600px;
   padding-bottom: 30px;
   width: 80%;
   margin: 50px auto 0;
   position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  display: none;
+  overflow: hidden;
 
   &__title {
     font-size: 24px;
@@ -326,6 +328,10 @@ sup {
   }
 }
 
+.active {
+  display: block;
+}
+
 .card {
   height: 350px;
   width: 30%;
@@ -455,7 +461,7 @@ sup {
 .cta-container {
   width: 70%;
   height: 10vh;
-  margin: 20px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
