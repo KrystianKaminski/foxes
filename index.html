@@ -55,18 +55,20 @@
       <div class="form-view__input form-view__input--text">
         <input class="text-input" type="text" />
       </div>
-      <div class="form-view__input form-view__input--gender">
-        <div class="form-view__gender form-view__gender--male">
-          <img src="./img/mezczyzna_1.jpg" alt="" />
-          <div class="form-view__text">Jestem mężczyzną</div>
-          <input type="checkbox" name="" id="">
+      <fieldset>
+        <div class="form-view__input form-view__input--gender">
+          <div class="form-view__gender form-view__gender--male">
+            <img src="./img/mezczyzna_1.jpg" alt="" />
+            <div class="form-view__text">Jestem mężczyzną</div>
+            <input type="radio" name="gender" id="gender-male">
+          </div>
+          <div class="form-view__gender form-view__gender--female">
+            <img src="./img/kobieta_1.jpg" alt="" />
+            <div class="form-view__text">Jestem kobietą</div>
+            <input type="radio" name="gender" id="gender-female">
+          </div>
         </div>
-        <div class="form-view__gender form-view__gender--female">
-          <img src="./img/kobieta_1.jpg" alt="" />
-          <div class="form-view__text">Jestem kobietą</div>
-          <input type="checkbox" name="" id="">
-        </div>
-      </div>
+      </fieldset>
     </div>
     <div class="form-view__image form-view__image--right">
       <img class="form-view__image-img" src="./img/ludzie.jpg" alt="">
@@ -107,18 +109,20 @@
       <div class="form-view__title">
         Zadam Ci kilka pytań, jesteś gotowy?
       </div>
-      <div class="form-view__answers">
-        <div class="form-view__answer form-view__answer--active">
-          <div class="step-line__dot step-line__dot--done step-line__dot--answer"></div>
-          <p class="answer-text">Tak</p>
-          <input type="checkbox" name="" id="">
+      <fieldset>
+        <div class="form-view__answers">
+          <div class="form-view__answer form-view__answer--active">
+            <div class="step-line__dot step-line__dot--done step-line__dot--answer"></div>
+            <p class="answer-text">Tak</p>
+            <input type="radio" name="slide-wrapper-1" id="">
+          </div>
+          <div class="form-view__answer">
+            <div class="step-line__dot step-line__dot--answer step-line__dot--refuse"></div>
+            <p class="answer-text">Nie</p>
+            <input type="radio" name="slide-wrapper-1" id="">
+          </div>
         </div>
-        <div class="form-view__answer">
-          <div class="step-line__dot step-line__dot--answer step-line__dot--refuse"></div>
-          <p class="answer-text">Nie</p>
-          <input type="checkbox" name="" id="">
-        </div>
-      </div>
+      </fieldset>
     </div>
     <div class="form-view__image form-view__image--right">
       <img class="form-view__image-img" src="./img/1.png" alt="">
@@ -130,30 +134,33 @@
       <div class="form-view__title">
         Jaka jest powierzchnia domu, którą zamierzasz sprzątać?
       </div>
-      <div class="form-view__answers form-view__answers--multiple">
-        <div class="form-view__answer form-view__answer--active">
-          <div class="form-view__circle">
-            <div class="form-view__active-circle"></div>
+      <fieldset>
+
+        <div class="form-view__answers form-view__answers--multiple">
+          <div class="form-view__answer form-view__answer--active">
+            <div class="form-view__circle">
+              <div class="form-view__active-circle"></div>
+            </div>
+            <p class="answer-text">do 150m<sup>2</sup></p>
+            <input type="radio" name="slide-wrapper-2" id="">
           </div>
-          <p class="answer-text">do 150m<sup>2</sup></p>
-          <input type="checkbox" name="" id="">
+          <div class="form-view__answer">
+            <div class="form-view__circle"></div>
+            <p class="answer-text">od 150m<sup>2</sup> - 240m<sup>2</sup></p>
+            <input type="radio" name="slide-wrapper-2" id="">
+          </div>
+          <div class="form-view__answer">
+            <div class="form-view__circle"></div>
+            <p class="answer-text">od 240m<sup>2</sup> - 350m<sup>2</sup></p>
+            <input type="radio" name="slide-wrapper-2" id="">
+          </div>
+          <div class="form-view__answer">
+            <div class="form-view__circle"></div>
+            <p class="answer-text">ponad 350m<sup>2</sup></p>
+            <input type="radio" name="slide-wrapper-2" id="">
+          </div>
         </div>
-        <div class="form-view__answer">
-          <div class="form-view__circle"></div>
-          <p class="answer-text">od 150m<sup>2</sup> - 240m<sup>2</sup></p>
-          <input type="checkbox" name="" id="">
-        </div>
-        <div class="form-view__answer">
-          <div class="form-view__circle"></div>
-          <p class="answer-text">od 240m<sup>2</sup> - 350m<sup>2</sup></p>
-          <input type="checkbox" name="" id="">
-        </div>
-        <div class="form-view__answer">
-          <div class="form-view__circle"></div>
-          <p class="answer-text">ponad 350m<sup>2</sup></p>
-          <input type="checkbox" name="" id="">
-        </div>
-      </div>
+      </fieldset>
     </div>
     <div class="form-view__image form-view__image--left">
       <img class="form-view__image-img" src="./img/2.png" alt="">
@@ -165,47 +172,55 @@
       <div class="form-view__title">
         Dobierz zestaw sprzątający do Twojego domu
       </div>
-      <div class="form-view__answers form-view__answers--card">
-        <div class="card">
-          <div class="card__title">Zestaw Silver</div>
-          <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente repudiandae
-            maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus deserunt,
-            corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
-          <div class="card__image">
-            <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
+      <fieldset>
+        <div class="form-view__answers form-view__answers--card">
+          <div class="card">
+            <div class="card__title">Zestaw Silver</div>
+            <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente
+              repudiandae
+              maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus
+              deserunt,
+              corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
+            <div class="card__image">
+              <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
+            </div>
+            <div class="card__button">
+              <div class="card__button--inactive"></div>
+            </div>
+            <input type="radio" name="slide-wrapper-3" id="">
           </div>
-          <div class="card__button">
-            <div class="card__button--inactive"></div>
+          <div class="card card--central">
+            <div class="card__title">Zestaw Gold</div>
+            <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente
+              repudiandae
+              maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus
+              deserunt,
+              corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
+            <div class="card__image">
+              <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
+            </div>
+            <div class="card__button">
+              <div class="card__button--active"></div>
+            </div>
+            <input type="radio" name="slide-wrapper-3" id="">
           </div>
-          <input type="checkbox" name="" id="">
+          <div class="card">
+            <div class="card__title">Zestaw Pro</div>
+            <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente
+              repudiandae
+              maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus
+              deserunt,
+              corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
+            <div class="card__image">
+              <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
+            </div>
+            <div class="card__button">
+              <div class="card__button--inactive"></div>
+            </div>
+            <input type="radio" name="slide-wrapper-3" id="">
+          </div>
         </div>
-        <div class="card card--central">
-          <div class="card__title">Zestaw Gold</div>
-          <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente repudiandae
-            maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus deserunt,
-            corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
-          <div class="card__image">
-            <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
-          </div>
-          <div class="card__button">
-            <div class="card__button--active"></div>
-          </div>
-          <input type="checkbox" name="" id="">
-        </div>
-        <div class="card">
-          <div class="card__title">Zestaw Pro</div>
-          <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente repudiandae
-            maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus deserunt,
-            corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
-          <div class="card__image">
-            <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
-          </div>
-          <div class="card__button">
-            <div class="card__button--inactive"></div>
-          </div>
-          <input type="checkbox" name="" id="">
-        </div>
-      </div>
+      </fieldset>
     </div>
     <!-- <div class="form-view__image form-view__image--right">
       <img class="form-view__image-img" src="./img/3.png" alt="">

@@ -232,7 +232,7 @@ sup {
     &--multiple {
       flex-direction: column;
       width: 80%;
-      flex-basis: 250px;
+      height: 250px;
 
       & > .form-view__answer {
         justify-content: flex-start;
@@ -564,7 +564,7 @@ sup {
   }
 }
 
-input[type="checkbox" i] {
+input[type="radio" i] {
   -webkit-appearance: none;
   appearance: none;
   height: 100%;
