@@ -38,7 +38,8 @@ sup {
     height: 15px;
     background-color: #ccc;
     border-radius: 50%;
-    transform: translateY(-40%); }
+    transform: translateY(-40%);
+    transition: all .2s ease-in; }
     .step-line__dot--active {
       background-color: #097aff;
       width: 25px;
@@ -55,7 +56,8 @@ sup {
     .step-line__dot--answer {
       transform: none;
       height: 20px;
-      width: 20px; }
+      width: 20px;
+      background-color: #ccc; }
     .step-line__dot--refuse {
       position: relative; }
       .step-line__dot--refuse::after {
@@ -194,11 +196,11 @@ sup {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #097aff;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    transition: all .2s ease-in; }
   .form-view__greetings-box {
     margin-left: 50px;
     margin-top: 30px;
@@ -301,12 +303,13 @@ sup {
     .card__button--active {
       height: 40px;
       width: 40px;
-      background-color: #097aff;
       border-radius: 50%;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      transition: all .2s ease-in;
+      background-color: #ccc; }
     .card__button--inactive {
       height: 40px;
       width: 40px;
@@ -321,7 +324,7 @@ sup {
   width: 40%;
   margin: 30px auto 0; }
   .image-box__image {
-    transform: translateY(300%);
+    transform: translateY(200%);
     max-width: 100%;
     display: block;
     animation: 1s ease-in 0.2s forwards animate-from-bottom; }
@@ -334,7 +337,8 @@ sup {
   display: block;
   font-size: 16px;
   padding: 0 10px;
-  color: #097aff; }
+  color: #097aff;
+  transition: border .2s ease-in; }
   .text-input:focus {
     border-color: #097aff; }
 
@@ -448,7 +452,18 @@ input[type="radio" i] {
   cursor: pointer;
   outline: none;
   border: 2px solid #ccc;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: border .2s ease-in;
+  z-index: 5; }
 
 input:checked {
   border: 2px solid #097aff; }
+
+input[type="radio"]:checked ~ .step-line__dot {
+  background-color: #097aff; }
+
+input[type="radio"]:checked ~ .form-view__circle .form-view__active-circle {
+  background-color: #097aff; }
+
+input[type="radio"]:checked ~ .card__button .card__button--active {
+  background-color: #097aff; }

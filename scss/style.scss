@@ -49,6 +49,7 @@ sup {
     background-color: $base-grey-color;
     border-radius: 50%;
     transform: translateY(-40%);
+    transition: all .2s ease-in;
 
     &--active {
       background-color: $basic-blue-color;
@@ -71,6 +72,7 @@ sup {
       transform: none;
       height: 20px;
       width: 20px;
+      background-color: $base-grey-color;
     }
 
     &--refuse {
@@ -266,11 +268,11 @@ sup {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: $basic-blue-color;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all .2s ease-in;
   }
 
   &__greetings-box {
@@ -410,12 +412,13 @@ sup {
     &--active {
       height: 40px;
       width: 40px;
-      background-color: $basic-blue-color;
       border-radius: 50%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      transition: all .2s ease-in;
+      background-color: $base-grey-color;
     }
 
     &--inactive {
@@ -436,7 +439,7 @@ sup {
   margin: 30px auto 0;
 
   &__image {
-    transform: translateY(300%);
+    transform: translateY(200%);
     max-width: 100%;
     display: block;
     animation: 1s ease-in 0.2s forwards animate-from-bottom;
@@ -452,6 +455,7 @@ sup {
   font-size: 16px;
   padding: 0 10px;
   color: $basic-blue-color;
+  transition: border .2s ease-in;
 
   &:focus {
     border-color: $basic-blue-color;
@@ -577,8 +581,22 @@ input[type="radio"i] {
   outline: none;
   border: 2px solid $base-grey-color;
   border-radius: 5px;
+  transition: border .2s ease-in;
+  z-index: 5;
 }
 
 input:checked {
   border: 2px solid $basic-blue-color;
+}
+
+input[type="radio"]:checked~.step-line__dot {
+  background-color: $basic-blue-color;
+}
+
+input[type="radio"]:checked~.form-view__circle .form-view__active-circle {
+  background-color: $basic-blue-color;
+}
+
+input[type="radio"]:checked~.card__button .card__button--active {
+  background-color: $basic-blue-color;
 }
