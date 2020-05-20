@@ -86,20 +86,15 @@ sup {
       height: 20px;
       width: 20px;
       background-color: $base-grey-color;
+      color: white;
     }
 
-    &--refuse {
-      position: relative;
-
-      &::after {
-        content: "X";
-        color: white;
-        font-size: 14px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+    & i {
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -412,38 +407,40 @@ sup {
   }
 
   &__button {
-    height: 50px;
-    width: 50px;
-    border: 3px solid $base-grey-color;
-    background-color: white;
-    border-radius: 50%;
+    background-color: #fff;
     position: absolute;
-    bottom: -25px;
+    bottom: -50px;
     left: 50%;
+    z-index: 5;
+    height: 75px;
+    width: 50px;
     transform: translateX(-50%);
-    z-index: 2;
 
-    &--active {
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
+    &::before {
       position: absolute;
-      top: 50%;
+      content: '';
+      top: -8%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all .2s ease-in;
-      background-color: $base-grey-color;
+      height: 50px;
+      width: 50px;
+      background-color: #fff;
+      border: 1px solid $base-grey-color;
+      border-radius: 50%;
+      transform: translate(-50%);
+      z-index: 3;
     }
 
-    &--inactive {
-      height: 40px;
-      width: 40px;
-      background-color: $base-grey-color;
-      border-radius: 50%;
+    &::after {
       position: absolute;
-      top: 50%;
+      content: '';
+      top: 3%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      height: 35px;
+      width: 35px;
+      background-color: $base-grey-color;
+      z-index: 3;
+      border-radius: 50%;
+      transform: translate(-50%);
     }
   }
 }
@@ -483,20 +480,41 @@ sup {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .cta {
+  margin-top: 35px;
   width: 180px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
+  background-color: $basic-blue-color;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: white;
+  transition: all .2s ease-in;
+  top: 0;
 
-  & .button {
-    max-width: 100%;
-    display: block;
-    height: 45px;
+  & .fas {
+    font-size: 16px;
+    margin-right: 30px;
+  }
+
+  & span {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: $light-blue-color;
+  }
+
+  &:active {
+    top: 6px;
+    box-shadow: 0 3px 0 $darker-blue-color;
   }
 }
 
@@ -510,7 +528,15 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  position: relative;
+
+  & i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .cta__download {
@@ -523,26 +549,6 @@ sup {
   & .button {
     height: 70px;
   }
-}
-
-.cta__again::after {
-  content: "Od nowa";
-  @include button-text;
-}
-
-.cta__back::after {
-  content: "Wstecz";
-  @include button-text;
-}
-
-.cta__next::after {
-  content: "Następny";
-  @include button-text;
-}
-
-.cta__download::after {
-  content: "Pobierz";
-  @include button-text;
 }
 
 @keyframes animate-from-left {
@@ -632,6 +638,6 @@ input[type="radio"]:checked~.form-view__circle .form-view__active-circle {
   background-color: $basic-blue-color;
 }
 
-input[type="radio"]:checked~.card__button .card__button--active {
+input[type="radio"]:checked~.card__button::after {
   background-color: $basic-blue-color;
 }

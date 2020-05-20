@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vacuflo</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="variables.js"></script>
@@ -78,7 +80,7 @@
   </div>
 
 
-  
+
   <div class="form-view">
     <div class="form-view__question form-view__question-2 form-view__question-2--male">
       <div class="form-view__title">
@@ -122,7 +124,7 @@
           </div>
           <div class="form-view__answer">
             <input type="radio" name="slide-wrapper-1" id="">
-            <div class="step-line__dot step-line__dot--answer step-line__dot--refuse"></div>
+            <div class="step-line__dot step-line__dot--answer"><i class="fas fa-times"></i></div>
             <p class="answer-text">Nie</p>
           </div>
         </div>
@@ -196,7 +198,6 @@
             </div>
             <input type="radio" name="slide-wrapper-3" id="">
             <div class="card__button">
-              <div class="card__button--active"></div>
             </div>
           </div>
           <div class="card card--central">
@@ -210,8 +211,7 @@
               <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
             </div>
             <input type="radio" name="slide-wrapper-3" id="">
-            <div class="card__button">
-              <div class="card__button--active"></div>
+            <div class="card__button card__button--central">
             </div>
           </div>
           <div class="card">
@@ -226,7 +226,6 @@
             </div>
             <input type="radio" name="slide-wrapper-3" id="">
             <div class="card__button">
-              <div class="card__button--active"></div>
             </div>
           </div>
         </div>
@@ -273,16 +272,19 @@
       <img class="form-view__image-img" src="./img/3.png" alt="">
     </div> -->
   <div class="cta-container">
-    <div class="cta cta__question-mark">?</div>
-    <div class="cta cta__again">
-      <img class="button" src="./img/od_nowa.png" alt="" />
-    </div>
-    <div class="cta cta__back">
-      <img class="button" src="./img/wstecz.png" alt="" />
-    </div>
-    <div class="cta cta__next">
-      <img class="button" src="./img/strzałka.png" alt="" />
-    </div>
+    <button class="cta cta__question-mark"><i class="fas fa-question"></i></button>
+    <button class="cta cta__again">
+      <i class="fas fa-home"></i>
+      <span>Od nowa</span>
+    </button>
+    <button class="cta cta__back">
+      <i class="fas fa-arrow-left"></i>
+      <span>Wstecz</span>
+    </button>
+    <button class="cta cta__next">
+      <i class="fas fa-arrow-right"></i>
+      <span>Następny</span>
+    </button>
   </div>
 </body>
 
