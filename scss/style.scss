@@ -479,7 +479,7 @@ sup {
   height: 10vh;
   margin: 35px auto 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -498,6 +498,7 @@ sup {
   top: 0;
   box-shadow: 0 3px 0 $darker-blue-color;
   padding: 0 20px;
+  margin: 0 10px;
 
   & .fas {
     font-size: 14px;
@@ -529,7 +530,6 @@ sup {
 }
 
 .cta__question-mark {
-  margin: auto 0;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -539,6 +539,8 @@ sup {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-right: auto;
+  transform: translateY(-25%);
 
   & i {
     font-size: 36px;

@@ -357,7 +357,7 @@ sup {
   height: 10vh;
   margin: 35px auto 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative; }
 
 .cta {
@@ -374,7 +374,8 @@ sup {
   transition: all 0.1s ease-in;
   top: 0;
   box-shadow: 0 3px 0 #0862c9;
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin: 0 10px; }
   .cta .fas {
     font-size: 14px; }
   .cta span {
@@ -393,7 +394,6 @@ sup {
     box-shadow: none; }
 
 .cta__question-mark {
-  margin: auto 0;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -402,7 +402,9 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  margin-right: auto;
+  transform: translateY(-25%); }
   .cta__question-mark i {
     font-size: 36px;
     position: absolute;
