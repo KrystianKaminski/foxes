@@ -210,7 +210,7 @@ sup {
       top: 50%;
       transform: translateY(-50%) translateX(150%);
 
-      &>img {
+      & > img {
         animation: 1s ease-in 0.2s forwards animate-from-right;
       }
     }
@@ -220,7 +220,7 @@ sup {
       top: 50%;
       transform: translateY(-50%) translateX(-150%);
 
-      &>img {
+      & > img {
         animation: 1s ease-in 0.2s forwards animate-from-left;
       }
     }
@@ -244,7 +244,7 @@ sup {
       width: 80%;
       height: 250px;
 
-      &>.form-view__answer {
+      & > .form-view__answer {
         justify-content: flex-start;
         align-items: center;
       }
@@ -281,7 +281,7 @@ sup {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
   }
 
   &__greetings-box {
@@ -418,7 +418,7 @@ sup {
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       top: -8%;
       left: 50%;
       height: 50px;
@@ -432,7 +432,7 @@ sup {
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       top: 3%;
       left: 50%;
       height: 35px;
@@ -467,7 +467,7 @@ sup {
   font-size: 16px;
   padding: 0 10px;
   color: $basic-blue-color;
-  transition: border .2s ease-in;
+  transition: border 0.2s ease-in;
 
   &:focus {
     border-color: $basic-blue-color;
@@ -477,15 +477,13 @@ sup {
 .cta-container {
   width: 70%;
   height: 10vh;
-  margin: 0 auto;
+  margin: 35px auto 0 auto;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
 .cta {
-  margin-top: 35px;
-  width: 180px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -496,16 +494,28 @@ sup {
   outline: none;
   border: none;
   color: white;
-  transition: all .2s ease-in;
+  transition: all 0.1s ease-in;
   top: 0;
+  box-shadow: 0 3px 0 $darker-blue-color;
+  padding: 0 20px;
 
   & .fas {
-    font-size: 16px;
-    margin-right: 30px;
+    font-size: 14px;
   }
 
   & span {
-    font-size: 16px;
+    font-size: 12px;
+  }
+
+  &__back span,
+  &__again span {
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  &__next span {
+    margin-left: auto;
+    margin-right: 15px;
   }
 
   &:hover {
@@ -513,8 +523,8 @@ sup {
   }
 
   &:active {
-    top: 6px;
-    box-shadow: 0 3px 0 $darker-blue-color;
+    top: 3px;
+    box-shadow: none;
   }
 }
 
@@ -622,7 +632,7 @@ input[type="radio"i] {
   outline: none;
   border: 2px solid $base-grey-color;
   border-radius: 5px;
-  transition: border .2s ease-in;
+  transition: border 0.2s ease-in;
   z-index: 5;
 }
 
@@ -630,14 +640,14 @@ input:checked {
   border: 2px solid $basic-blue-color;
 }
 
-input[type="radio"]:checked~.step-line__dot {
+input[type="radio"]:checked ~ .step-line__dot {
   background-color: $basic-blue-color;
 }
 
-input[type="radio"]:checked~.form-view__circle .form-view__active-circle {
+input[type="radio"]:checked ~ .form-view__circle .form-view__active-circle {
   background-color: $basic-blue-color;
 }
 
-input[type="radio"]:checked~.card__button::after {
+input[type="radio"]:checked ~ .card__button::after {
   background-color: $basic-blue-color;
 }

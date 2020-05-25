@@ -207,7 +207,7 @@ sup {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all .2s ease-in; }
+    transition: all 0.2s ease-in; }
   .form-view__greetings-box {
     margin-left: 50px;
     margin-top: 30px;
@@ -307,7 +307,7 @@ sup {
     transform: translateX(-50%); }
     .card__button::before {
       position: absolute;
-      content: '';
+      content: "";
       top: -8%;
       left: 50%;
       height: 50px;
@@ -319,7 +319,7 @@ sup {
       z-index: 3; }
     .card__button::after {
       position: absolute;
-      content: '';
+      content: "";
       top: 3%;
       left: 50%;
       height: 35px;
@@ -348,21 +348,19 @@ sup {
   font-size: 16px;
   padding: 0 10px;
   color: #097aff;
-  transition: border .2s ease-in; }
+  transition: border 0.2s ease-in; }
   .text-input:focus {
     border-color: #097aff; }
 
 .cta-container {
   width: 70%;
   height: 10vh;
-  margin: 0 auto;
+  margin: 35px auto 0 auto;
   display: flex;
   justify-content: space-between;
   position: relative; }
 
 .cta {
-  margin-top: 35px;
-  width: 180px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -373,18 +371,26 @@ sup {
   outline: none;
   border: none;
   color: white;
-  transition: all .2s ease-in;
-  top: 0; }
+  transition: all 0.1s ease-in;
+  top: 0;
+  box-shadow: 0 3px 0 #0862c9;
+  padding: 0 20px; }
   .cta .fas {
-    font-size: 16px;
-    margin-right: 30px; }
+    font-size: 14px; }
   .cta span {
-    font-size: 16px; }
+    font-size: 12px; }
+  .cta__back span,
+  .cta__again span {
+    margin-right: auto;
+    margin-left: 15px; }
+  .cta__next span {
+    margin-left: auto;
+    margin-right: 15px; }
   .cta:hover {
     background-color: #3a96ff; }
   .cta:active {
-    top: 6px;
-    box-shadow: 0 3px 0 #0862c9; }
+    top: 3px;
+    box-shadow: none; }
 
 .cta__question-mark {
   margin: auto 0;
@@ -464,7 +470,7 @@ input[type="radio" i] {
   outline: none;
   border: 2px solid #ccc;
   border-radius: 5px;
-  transition: border .2s ease-in;
+  transition: border 0.2s ease-in;
   z-index: 5; }
 
 input:checked {
