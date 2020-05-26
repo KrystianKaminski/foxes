@@ -2,10 +2,16 @@
 @import "variables";
 
 body {
-  font-family: "Roboto";
-  width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
+  max-width: 1200px;
+  overflow-x: hidden;
+}
+
+.container {
+  font-family: "Montserrat", sans-serif;
+  width: 65vw;
+  margin: 0 auto;
+  font-weight: 300;
 }
 
 sup {
@@ -15,8 +21,8 @@ sup {
 
 .header {
   display: flex;
-  margin-top: 40px 0;
-  width: 900px;
+  margin: 40px auto;
+  width: 90%;
 }
 
 .logo-box {
@@ -37,7 +43,7 @@ sup {
 }
 
 .step-line {
-  margin-top: 25px;
+  margin: 25px auto 0;
   width: 100%;
   height: 3px;
   background-color: $base-grey-color;
@@ -62,7 +68,7 @@ sup {
         height: 4px;
         position: absolute;
         top: 53%;
-        left: -35px;
+        left: -25px;
         transform: translateY(-50%);
         background-color: $basic-blue-color;
         z-index: -1;
@@ -109,7 +115,6 @@ sup {
   border-radius: 5px;
   height: 600px;
   padding-bottom: 30px;
-  width: 80%;
   margin: 50px auto 0;
   position: relative;
   background: rgba(255, 255, 255, 0.85);
@@ -118,10 +123,11 @@ sup {
 
   &__title {
     font-size: 24px;
-    margin-left: 30px;
     margin-bottom: 20px;
     padding-top: 20px;
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
 
     &--final {
       color: white;
@@ -162,7 +168,7 @@ sup {
         left: 30px;
         text-align: center;
         height: 5px;
-        width: 15%;
+        width: 20%;
         font-size: 12px;
         padding: 10px;
         color: $basic-blue-color;
@@ -322,7 +328,7 @@ sup {
 
     &-title {
       color: white;
-      font-size: 36px;
+      font-size: 28px;
       text-align: left;
       padding: 0 30px;
     }
@@ -352,6 +358,7 @@ sup {
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  border-radius: 10px;
 
   &--final {
     position: absolute;
@@ -359,6 +366,7 @@ sup {
     right: 15%;
     background-color: white;
     justify-content: flex-start;
+    border: 3px solid $base-grey-color;
   }
 
   &--small {
@@ -366,9 +374,10 @@ sup {
     width: 200px;
     position: absolute;
     top: 28%;
-    right: 3%;
+    right: 1%;
     background-color: white;
     justify-content: flex-start;
+    border: 3px solid $base-grey-color;
   }
 
   &--central {
@@ -451,10 +460,11 @@ sup {
 
   &__image {
     transform: translateY(200%);
-    max-width: 100%;
+    max-width: 80%;
     display: block;
     transform: translateY(200%);
     animation: 0.5s ease-in 0.2s forwards animate-from-bottom;
+    margin: 0 auto;
   }
 }
 
@@ -475,7 +485,7 @@ sup {
 }
 
 .cta-container {
-  width: 70%;
+  width: 100%;
   height: 10vh;
   margin: 35px auto 0 auto;
   display: flex;
@@ -554,9 +564,9 @@ sup {
 .cta__download {
   width: 250px;
   z-index: 3;
-  position: absolute;
   padding: 0 30px;
-  transform: translateY(-50px);
+  transform: translateY(-30px) translateX(50px);
+  background-color: $light-blue-color;
 
   & .button {
     height: 70px;
@@ -583,7 +593,7 @@ sup {
   }
 
   to {
-    width: 35px;
+    width: 25px;
   }
 }
 
@@ -652,4 +662,290 @@ input[type="radio"]:checked ~ .form-view__circle .form-view__active-circle {
 
 input[type="radio"]:checked ~ .card__button::after {
   background-color: $basic-blue-color;
+}
+
+@media only screen and (min-width: 1500px) {
+  .container {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    width: 75vw;
+  }
+  .card--final {
+    right: 20%;
+    width: 25%;
+  }
+
+  .card__image--final {
+    width: 205px;
+  }
+
+  .card--small {
+    width: 175px;
+  }
+
+  .form-view__image img {
+    max-width: 75%;
+  }
+
+  .form-view__image--left {
+    transform: translateY(-50%) translateX(-115%);
+  }
+
+  .form-view__image--right {
+    transform: translateY(-50%) translateX(130%);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .form-view__image--left {
+    transform: translateY(-50%) translateX(-115%);
+  }
+
+  .form-view__image--right {
+    transform: translateY(-50%) translateX(130%);
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  @keyframes animate-width {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 20px;
+    }
+  }
+
+  .step-line__dot--active:not(:first-of-type)::before {
+    left: -20px;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  .form-view__summary-title {
+    font-size: 24px;
+  }
+  .logo-box__img {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .form-view__image img {
+    max-width: 70%;
+  }
+
+  .form-view__image--left {
+    transform: translateY(-50%) translateX(-105%);
+  }
+
+  .form-view__image--right {
+    transform: translateY(-50%) translateX(120%);
+  }
+
+  .form-view__greetings-box {
+    margin-left: 25px;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  .form-view__summary {
+    width: 50%;
+  }
+
+  @keyframes animate-width {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 16px;
+    }
+  }
+
+  .step-line__dot--active:not(:first-of-type)::before {
+    left: -16px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .card--final {
+    right: 28%;
+  }
+
+  .card--small {
+    right: 6%;
+  }
+
+  .cta__download {
+    transform: translateY(-40px) translateX(30px);
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  .form-view__summary-title {
+    font-size: 20px;
+  }
+
+  .card--final {
+    right: 23%;
+    height: 270px;
+  }
+
+  .card--small {
+    width: 150px;
+    right: 2%;
+  }
+
+  .card__image--final {
+    width: 160px;
+  }
+}
+
+@media only screen and (max-width: 865px) {
+  @keyframes animate-width {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 13px;
+    }
+  }
+
+  .step-line__dot--active:not(:first-of-type)::before {
+    left: -13px;
+  }
+
+  .form-view__text {
+    font-size: 16px;
+  }
+
+  .form-view__input--text::after {
+    font-size: 10px;
+  }
+
+  .card {
+    height: 350px;
+    width: 30%;
+
+    &__title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &--central {
+      width: 35%;
+      height: 400px;
+    }
+  }
+}
+@media only screen and (max-width: 760px) {
+  .step-line {
+    display: none;
+  }
+
+  .card--final {
+    right: 30%;
+    height: 200px;
+    width: 20%;
+  }
+
+  .card__image--final {
+    height: 50px;
+    width: 110px;
+  }
+
+  .card--small {
+    width: 20%;
+    top: 20%;
+    height: 200px;
+  }
+
+  .card__image--small {
+    width: 35px;
+  }
+
+  .card__image img {
+    max-width: 90%;
+  }
+
+  .form-view__answers--multiple {
+    height: 300px;
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .form-view__answers--card {
+    flex-direction: column;
+    height: 105%;
+  }
+
+  .form-view__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .form-view {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .card {
+    height: auto;
+    width: 70%;
+    margin-bottom: 15px;
+
+    &--central {
+      width: 70%;
+      height: 200px;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__title {
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    &__text {
+      margin-top: 10px;
+    }
+  }
+
+  .card--small,
+  .card--final {
+    width: 20%;
+    top: 20%;
+    height: 200px;
+  }
+
+  .form-view__summary-title {
+    font-size: 14px;
+  }
+
+  .form-view__summary-subtitle {
+    font-size: 12px;
+  }
 }
