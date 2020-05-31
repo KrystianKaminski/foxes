@@ -92,6 +92,7 @@ sup {
   position: relative;
   background: rgba(255, 255, 255, 0.85);
   display: none;
+  justify-content: space-evenly;
   box-shadow: 0 0 10px #b9b9b9;
   min-height: 500px; }
   .form-view__title {
