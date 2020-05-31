@@ -113,20 +113,20 @@ sup {
 
 .form-view {
   border-radius: 5px;
-  height: 600px;
   padding-bottom: 30px;
   margin: 50px auto 0;
   position: relative;
   background: rgba(255, 255, 255, 0.85);
   display: none;
   box-shadow: 0 0 10px #b9b9b9;
+  min-height: 500px;
 
   &__title {
     font-size: 24px;
     margin-bottom: 20px;
     padding-top: 20px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 80%;
 
     &--final {
@@ -141,7 +141,6 @@ sup {
     display: flex;
     flex-direction: column;
     height: inherit;
-    justify-content: space-evenly;
     min-height: 400px;
 
     &--final {
@@ -458,7 +457,10 @@ sup {
 .image-box {
   width: 40%;
   margin: 30px auto 0;
-
+  overflow-y: hidden;
+  position: absolute;
+  right: 20%;
+  bottom: 0;
   &__image {
     max-width: 80%;
     transform: translateY(350%);
@@ -1093,9 +1095,5 @@ input[type="radio"]:checked ~ .card__button::after {
 
   .cta__download {
     width: 100px;
-  }
-
-  .form-view__input {
-    width: 85%;
   }
 }
