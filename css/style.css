@@ -92,7 +92,6 @@ sup {
   position: relative;
   background: rgba(255, 255, 255, 0.85);
   display: none;
-  justify-content: space-evenly;
   box-shadow: 0 0 10px #b9b9b9;
   min-height: 500px; }
   .form-view__title {
@@ -110,6 +109,7 @@ sup {
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     height: inherit;
     min-height: 400px; }
     .form-view__question--final {
@@ -117,6 +117,8 @@ sup {
       justify-content: flex-start;
       background-color: #097aff;
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
+    .form-view__question-2--male, .form-view__question-2--female {
+      justify-content: flex-start; }
   .form-view__input {
     width: 50%;
     margin-left: 30px;
@@ -271,7 +273,7 @@ sup {
   .card--final {
     position: absolute;
     top: 20%;
-    right: 15%;
+    right: 12%;
     background-color: white;
     justify-content: flex-start;
     border: 3px solid #ccc; }
@@ -280,7 +282,7 @@ sup {
     width: 200px;
     position: absolute;
     top: 28%;
-    right: 1%;
+    right: -2%;
     background-color: white;
     justify-content: flex-start;
     border: 3px solid #ccc; }
@@ -346,7 +348,7 @@ sup {
   right: 20%;
   bottom: 0; }
   .image-box__image {
-    max-width: 80%;
+    max-width: 70%;
     transform: translateY(350%);
     animation: 0.5s ease-in 0.2s forwards animate-from-bottom;
     margin: 0 auto; }
@@ -503,6 +505,15 @@ input[type="radio"]:checked ~ .form-view__circle .form-view__active-circle {
 input[type="radio"]:checked ~ .card__button::after {
   background-color: #097aff; }
 
+@media only screen and (min-width: 1700px) {
+  @keyframes animate-width {
+    from {
+      width: 0; }
+    to {
+      width: 35px; } }
+  .step-line__dot--active:not(:first-of-type)::before {
+    left: -35px; } }
+
 @media only screen and (min-width: 1500px) {
   .container {
     width: 60vw; } }
@@ -537,7 +548,9 @@ input[type="radio"]:checked ~ .card__button::after {
     to {
       width: 20px; } }
   .step-line__dot--active:not(:first-of-type)::before {
-    left: -20px; } }
+    left: -20px; }
+  .image-box__image {
+    max-width: 80%; } }
 
 @media only screen and (max-width: 1070px) {
   .form-view__summary-title {
@@ -573,7 +586,9 @@ input[type="radio"]:checked ~ .card__button::after {
     right: 6%; }
   .cta__download {
     transform: translateY(-40px) translateX(30px);
-    width: 150px; } }
+    width: 150px; }
+  .image-box__image {
+    max-width: 90%; } }
 
 @media only screen and (max-width: 880px) {
   .heading {
@@ -587,7 +602,9 @@ input[type="radio"]:checked ~ .card__button::after {
     width: 150px;
     right: 2%; }
   .card__image--final {
-    width: 160px; } }
+    width: 160px; }
+  .image-box__image {
+    max-width: 100%; } }
 
 @media only screen and (max-width: 865px) {
   @keyframes animate-width {
@@ -633,7 +650,9 @@ input[type="radio"]:checked ~ .card__button::after {
     max-width: 90%; }
   .form-view__answers--multiple {
     height: 300px;
-    width: 85%; } }
+    width: 85%; }
+  .image-box {
+    width: 45%; } }
 
 @media only screen and (max-width: 730px) {
   .form-view__answers--card {
@@ -725,7 +744,9 @@ input[type="radio"]:checked ~ .card__button::after {
   .form-view__answers {
     flex-direction: column; }
   .form-view__answer {
-    width: 65%; } }
+    width: 65%; }
+  .image-box {
+    width: 50%; } }
 
 @media only screen and (max-width: 535px) {
   .cta__back,
@@ -742,7 +763,9 @@ input[type="radio"]:checked ~ .card__button::after {
   .heading {
     font-size: 18px; }
   .card__image--final {
-    width: 90px; } }
+    width: 90px; }
+  .image-box {
+    width: 60%; } }
 
 @media only screen and (max-width: 430px) {
   .form-view__text {
