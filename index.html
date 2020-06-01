@@ -59,7 +59,7 @@
         </div>
         <div class="form-view__sub-title">Jak masz na imię?</div>
         <div class="form-view__input form-view__input--text">
-          <input class="text-input" type="text" />
+          <input class="text-input" type="text" id="fullname" />
         </div>
         <fieldset>
           <div class="form-view__input form-view__input--gender">
@@ -86,25 +86,11 @@
     <div class="form-view">
       <div class="form-view__question form-view__question-2 form-view__question-2--male">
         <div class="form-view__title">
-          Cześć <span id="user-name">NoTitle</span>, poznajmy się - jestem Łukasz :)
+          Cześć <span id="user-name">NoTitle</span>, poznajmy się - jestem <span id="nameToDisplay"></span> :)
         </div>
         <div class="form-view__sub-title">Przeprowadzę Cię przez proces doboru odkurzacza centralnego</div>
         <div class="image-box">
-          <img class="image-box__image" src="./img/facet.png" alt="">
-        </div>
-      </div>
-      <div class="form-view__image form-view__image--left">
-        <img class="form-view__image-img" src="./img/1.png" alt="">
-      </div>
-    </div>
-    <div class="form-view">
-      <div class="form-view__question form-view__question-2 form-view__question-2--female">
-        <div class="form-view__title">
-          Cześć <span id="user-name">NoTitle</span>, poznajmy się - jestem Kinga :)
-        </div>
-        <div class="form-view__sub-title">Przeprowadzę Cię przez proces doboru odkurzacza centralnego</div>
-        <div class="image-box">
-          <img class="image-box__image" src="./img/babka.png" alt="">
+          <img id="image-box-gender" class="image-box__image" alt="">
         </div>
       </div>
       <div class="form-view__image form-view__image--left">
