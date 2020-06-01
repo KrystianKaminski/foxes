@@ -491,7 +491,8 @@ input[type="radio" i] {
   border: 2px solid #ccc;
   border-radius: 5px;
   transition: border 0.2s ease-in;
-  z-index: 5; }
+  z-index: 5;
+  background-color: transparent; }
 
 input:checked {
   border: 2px solid #097aff; }
