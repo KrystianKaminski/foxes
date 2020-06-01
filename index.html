@@ -1,282 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacuflo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/prefix.css" />
+    <script src="variables.js"></script>
+    <script src="index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vacuflo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script src="variables.js"></script>
-  <script src="index.js"></script>
-</head>
-
-<body onload="onInit()">
-  <div class="container">
-
-    <div class="header">
-      <div class="logo-box">
-        <img class="logo-box__img" src="./img/logo_vacuflo.png" alt="Logo Vacuflo" />
+  <body onload="onInit()">
+    <div class="container">
+      <div class="header">
+        <div class="logo-box">
+          <img
+            class="logo-box__img"
+            src="./img/logo_vacuflo.png"
+            alt="Logo Vacuflo"
+          />
+        </div>
+        <h1 class="heading">Dobór odkurzacza centralnego</h1>
       </div>
-      <h1 class="heading">Dobór odkurzacza centralnego</h1>
-    </div>
-    <div class="step-line">
-      <div class="step-line__dot step-line__dot--active"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-      <div class="step-line__dot"></div>
-    </div>
+      <div class="step-line">
+        <div class="step-line__dot step-line__dot--active"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+        <div class="step-line__dot"></div>
+      </div>
 
-
-    <div class="form-view">
-      <div class="form-view__question form-view__question-1">
-        <div class="form-view__title">
-          Cześć, jestem tutaj aby pomóc Ci dobrać odkurzacz centralny :)
-        </div>
-        <div class="form-view__sub-title">Jak masz na imię?</div>
-        <div class="form-view__input form-view__input--text">
-          <input class="text-input" type="text" id="fullname" />
-        </div>
-        <fieldset>
-          <div class="form-view__input form-view__input--gender">
-            <div class="form-view__gender form-view__gender--male">
-              <img src="./img/mezczyzna_1.jpg" alt="" />
-              <div class="form-view__text">Jestem mężczyzną</div>
-              <input type="radio" name="gender" id="gender-male">
+      <div class="form-view">
+        <div class="form-view__question form-view__question-1">
+          <div class="form-view__title">
+            Cześć, jestem tutaj aby pomóc Ci dobrać odkurzacz centralny :)
+          </div>
+          <div class="form-view__sub-title">Jak masz na imię?</div>
+          <div class="form-view__input form-view__input--text">
+            <input class="text-input" type="text" id="fullname" />
+          </div>
+          <fieldset>
+            <div class="form-view__input form-view__input--gender">
+              <div class="form-view__gender form-view__gender--male">
+                <img src="./img/mezczyzna_1.jpg" alt="" />
+                <div class="form-view__text">Jestem mężczyzną</div>
+                <input type="radio" name="gender" id="gender-male" />
+              </div>
+              <div class="form-view__gender form-view__gender--female">
+                <img src="./img/kobieta_1.jpg" alt="" />
+                <div class="form-view__text">Jestem kobietą</div>
+                <input type="radio" name="gender" id="gender-female" />
+              </div>
             </div>
-            <div class="form-view__gender form-view__gender--female">
-              <img src="./img/kobieta_1.jpg" alt="" />
-              <div class="form-view__text">Jestem kobietą</div>
-              <input type="radio" name="gender" id="gender-female">
+          </fieldset>
+        </div>
+        <div class="form-view__image form-view__image--right">
+          <img class="form-view__image-img" src="./img/ludzie.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="form-view">
+        <div
+          class="form-view__question form-view__question-2 form-view__question-2--male"
+        >
+          <div class="form-view__title">
+            Cześć <span id="user-name">NoTitle</span>, poznajmy się - jestem
+            <span id="nameToDisplay"></span> :)
+          </div>
+          <div class="form-view__sub-title">
+            Przeprowadzę Cię przez proces doboru odkurzacza centralnego
+          </div>
+          <div class="image-box">
+            <img id="image-box-gender" class="image-box__image" alt="" />
+          </div>
+        </div>
+        <div class="form-view__image form-view__image--left">
+          <img class="form-view__image-img" src="./img/1.png" alt="" />
+        </div>
+      </div>
+
+      <div class="form-view">
+        <div class="form-view__question form-view__question-3">
+          <div class="form-view__title">
+            Zadam Ci kilka pytań, jesteś gotowy?
+          </div>
+          <fieldset>
+            <div class="form-view__answers">
+              <div class="form-view__answer">
+                <input type="radio" name="slide-wrapper-1" id="" />
+                <div
+                  class="step-line__dot step-line__dot--done step-line__dot--answer"
+                ></div>
+                <p class="answer-text">Tak</p>
+              </div>
+              <div class="form-view__answer">
+                <input type="radio" name="slide-wrapper-1" id="" />
+                <div class="step-line__dot step-line__dot--answer">
+                  <i class="fas fa-times"></i>
+                </div>
+                <p class="answer-text">Nie</p>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-view__image form-view__image--right">
+          <img class="form-view__image-img" src="./img/1.png" alt="" />
+        </div>
+      </div>
+
+      <div class="form-view">
+        <div class="form-view__question form-view__question-4">
+          <div class="form-view__title">
+            Jaka jest powierzchnia domu, którą zamierzasz sprzątać?
+          </div>
+          <fieldset>
+            <div class="form-view__answers form-view__answers--multiple">
+              <div class="form-view__answer">
+                <input type="radio" name="slide-wrapper-2" id="" />
+                <div class="form-view__circle">
+                  <div class="form-view__active-circle"></div>
+                </div>
+                <p class="answer-text">do 150m<sup>2</sup></p>
+              </div>
+              <div class="form-view__answer">
+                <input type="radio" name="slide-wrapper-2" id="" />
+                <div class="form-view__circle">
+                  <div class="form-view__active-circle"></div>
+                </div>
+                <p class="answer-text">
+                  od 150m<sup>2</sup> - 240m<sup>2</sup>
+                </p>
+              </div>
+              <div class="form-view__answer">
+                <input type="radio" name="slide-wrapper-2" id="" />
+                <div class="form-view__circle">
+                  <div class="form-view__active-circle"></div>
+                </div>
+                <p class="answer-text">
+                  od 240m<sup>2</sup> - 350m<sup>2</sup>
+                </p>
+              </div>
+              <div class="form-view__answer">
+                <input type="radio" name="slide-wrapper-2" id="" />
+                <div class="form-view__circle">
+                  <div class="form-view__active-circle"></div>
+                </div>
+                <p class="answer-text">ponad 350m<sup>2</sup></p>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-view__image form-view__image--left">
+          <img class="form-view__image-img" src="./img/2.png" alt="" />
+        </div>
+      </div>
+
+      <div class="form-view">
+        <div class="form-view__question form-view__question-5">
+          <div class="form-view__title">
+            Dobierz zestaw sprzątający do Twojego domu
+          </div>
+          <fieldset>
+            <div class="form-view__answers form-view__answers--card">
+              <div class="card">
+                <div class="card__title">Zestaw Silver</div>
+                <div class="card__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat sapiente repudiandae maxime excepturi. Veritatis
+                  exercitationem corporis nostrum maxime perferendis rerum
+                  voluptatibus deserunt, corrupti adipisci mollitia nulla cum
+                  laudantium doloremque aut.
+                </div>
+                <div class="card__image">
+                  <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo" />
+                </div>
+                <input type="radio" name="slide-wrapper-3" id="" />
+                <div class="card__button"></div>
+              </div>
+              <div class="card card--central">
+                <div class="card__title">Zestaw Gold</div>
+                <div class="card__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat sapiente repudiandae maxime excepturi. Veritatis
+                  exercitationem corporis nostrum maxime perferendis rerum
+                  voluptatibus deserunt, corrupti adipisci mollitia nulla cum
+                  laudantium doloremque aut.
+                </div>
+                <div class="card__image">
+                  <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo" />
+                </div>
+                <input type="radio" name="slide-wrapper-3" id="" />
+                <div class="card__button card__button--central"></div>
+              </div>
+              <div class="card">
+                <div class="card__title">Zestaw Pro</div>
+                <div class="card__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat sapiente repudiandae maxime excepturi. Veritatis
+                  exercitationem corporis nostrum maxime perferendis rerum
+                  voluptatibus deserunt, corrupti adipisci mollitia nulla cum
+                  laudantium doloremque aut.
+                </div>
+                <div class="card__image">
+                  <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo" />
+                </div>
+                <input type="radio" name="slide-wrapper-3" id="" />
+                <div class="card__button"></div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!-- <div class="form-view__image form-view__image--right">
+        <img class="form-view__image-img" src="./img/3.png" alt="">
+      </div> -->
+      </div>
+
+      <div class="form-view">
+        <div
+          class="form-view__question form-view__question--final form-view__question-6"
+        >
+          <div class="form-view__title form-view__title--final">
+            Do Twojego domu idealnie sprawdzi się jednostka
+          </div>
+          <div class="form-view__greetings-box">
+            <div class="form-view__greetings-icon-box">
+              <div class="form-view__greetings-icon"></div>
+            </div>
+            <div class="form-view__greetings-text">
+              Dziękuję za uzupełnienie formularza! Mam nadzieję, że pomoże Ci w
+              doborze jednostki.
             </div>
           </div>
-        </fieldset>
-      </div>
-      <div class="form-view__image form-view__image--right">
-        <img class="form-view__image-img" src="./img/ludzie.jpg" alt="">
-      </div>
-    </div>
-
-
-
-    <div class="form-view">
-      <div class="form-view__question form-view__question-2 form-view__question-2--male">
-        <div class="form-view__title">
-          Cześć <span id="user-name">NoTitle</span>, poznajmy się - jestem <span id="nameToDisplay"></span> :)
-        </div>
-        <div class="form-view__sub-title">Przeprowadzę Cię przez proces doboru odkurzacza centralnego</div>
-        <div class="image-box">
-          <img id="image-box-gender" class="image-box__image" alt="">
-        </div>
-      </div>
-      <div class="form-view__image form-view__image--left">
-        <img class="form-view__image-img" src="./img/1.png" alt="">
-      </div>
-    </div>
-
-    <div class="form-view">
-      <div class="form-view__question form-view__question-3">
-        <div class="form-view__title">
-          Zadam Ci kilka pytań, jesteś gotowy?
-        </div>
-        <fieldset>
-          <div class="form-view__answers">
-            <div class="form-view__answer">
-              <input type="radio" name="slide-wrapper-1" id="">
-              <div class="step-line__dot step-line__dot--done step-line__dot--answer"></div>
-              <p class="answer-text">Tak</p>
+          <div class="form-view__summary">
+            <div class="form-view__summary-title">
+              Wszystkie inne wybrane akcesoria znajdziesz tutaj!
             </div>
-            <div class="form-view__answer">
-              <input type="radio" name="slide-wrapper-1" id="">
-              <div class="step-line__dot step-line__dot--answer"><i class="fas fa-times"></i></div>
-              <p class="answer-text">Nie</p>
+            <div class="form-view__summary-subtitle">
+              W otwartym pliku znajdziesz pełne podsumowanie wyboru jednostki
+              centralnej oraz wybranych akcesoriów. Pamiętaj aby zapisać
+              uzupełniony plik :)
             </div>
           </div>
-        </fieldset>
-      </div>
-      <div class="form-view__image form-view__image--right">
-        <img class="form-view__image-img" src="./img/1.png" alt="">
-      </div>
-    </div>
-
-    <div class="form-view">
-      <div class="form-view__question form-view__question-4">
-        <div class="form-view__title">
-          Jaka jest powierzchnia domu, którą zamierzasz sprzątać?
         </div>
-        <fieldset>
-
-          <div class="form-view__answers form-view__answers--multiple">
-            <div class="form-view__answer">
-              <input type="radio" name="slide-wrapper-2" id="">
-              <div class="form-view__circle">
-                <div class="form-view__active-circle"></div>
-              </div>
-              <p class="answer-text">do 150m<sup>2</sup></p>
-            </div>
-            <div class="form-view__answer">
-              <input type="radio" name="slide-wrapper-2" id="">
-              <div class="form-view__circle">
-                <div class="form-view__active-circle"></div>
-              </div>
-              <p class="answer-text">od 150m<sup>2</sup> - 240m<sup>2</sup></p>
-            </div>
-            <div class="form-view__answer">
-              <input type="radio" name="slide-wrapper-2" id="">
-              <div class="form-view__circle">
-                <div class="form-view__active-circle"></div>
-              </div>
-              <p class="answer-text">od 240m<sup>2</sup> - 350m<sup>2</sup></p>
-            </div>
-            <div class="form-view__answer">
-              <input type="radio" name="slide-wrapper-2" id="">
-              <div class="form-view__circle">
-                <div class="form-view__active-circle"></div>
-              </div>
-              <p class="answer-text">ponad 350m<sup>2</sup></p>
-            </div>
+        <button class="cta cta__download">
+          <span>Pobierz</span>
+        </button>
+        <div class="card card--final">
+          <div class="card__title">Vroom</div>
+          <div class="card__image card__image--final">
+            <img src="./img/vr.png" alt="" />
           </div>
-        </fieldset>
-      </div>
-      <div class="form-view__image form-view__image--left">
-        <img class="form-view__image-img" src="./img/2.png" alt="">
-      </div>
-    </div>
-
-    <div class="form-view">
-      <div class="form-view__question form-view__question-5">
-        <div class="form-view__title">
-          Dobierz zestaw sprzątający do Twojego domu
         </div>
-        <fieldset>
-          <div class="form-view__answers form-view__answers--card">
-            <div class="card">
-              <div class="card__title">Zestaw Silver</div>
-              <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente
-                repudiandae
-                maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus
-                deserunt,
-                corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
-              <div class="card__image">
-                <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
-              </div>
-              <input type="radio" name="slide-wrapper-3" id="">
-              <div class="card__button">
-              </div>
-            </div>
-            <div class="card card--central">
-              <div class="card__title">Zestaw Gold</div>
-              <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente
-                repudiandae
-                maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus
-                deserunt,
-                corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
-              <div class="card__image">
-                <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
-              </div>
-              <input type="radio" name="slide-wrapper-3" id="">
-              <div class="card__button card__button--central">
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__title">Zestaw Pro</div>
-              <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente
-                repudiandae
-                maxime excepturi. Veritatis exercitationem corporis nostrum maxime perferendis rerum voluptatibus
-                deserunt,
-                corrupti adipisci mollitia nulla cum laudantium doloremque aut.</div>
-              <div class="card__image">
-                <img src="./img/logo_vacuflo.png" alt="Logo Vacuflo">
-              </div>
-              <input type="radio" name="slide-wrapper-3" id="">
-              <div class="card__button">
-              </div>
-            </div>
+        <div class="card card--small card--active">
+          <div class="card__title">Filtered Cyclonic</div>
+          <div class="card__image card__image--small">
+            <img src="./img/fc.png" alt="" />
           </div>
-        </fieldset>
+        </div>
       </div>
       <!-- <div class="form-view__image form-view__image--right">
         <img class="form-view__image-img" src="./img/3.png" alt="">
       </div> -->
-    </div>
-
-    <div class="form-view">
-      <div class="form-view__question form-view__question--final form-view__question-6">
-        <div class="form-view__title form-view__title--final">
-          Do Twojego domu idealnie sprawdzi się jednostka
-        </div>
-        <div class="form-view__greetings-box">
-          <div class="form-view__greetings-icon-box">
-            <div class="form-view__greetings-icon"></div>
-          </div>
-          <div class="form-view__greetings-text">Dziękuję za uzupełnienie formularza! Mam nadzieję, że pomoże Ci w
-            doborze
-            jednostki.</div>
-        </div>
-        <div class="form-view__summary">
-          <div class="form-view__summary-title">Wszystkie inne wybrane akcesoria znajdziesz tutaj!</div>
-          <div class="form-view__summary-subtitle">
-            W otwartym pliku znajdziesz pełne podsumowanie wyboru jednostki centralnej oraz wybranych akcesoriów.
-            Pamiętaj
-            aby zapisać uzupełniony plik :)
-          </div>
-        </div>
-      </div>
-      <button class="cta cta__download">
-        <span>Pobierz</span>
-      </button>
-      <div class="card card--final">
-        <div class="card__title">Vroom</div>
-        <div class="card__image card__image--final"><img src="./img/vr.png" alt=""></div>
-      </div>
-      <div class="card card--small card--active">
-        <div class="card__title">Filtered Cyclonic</div>
-        <div class="card__image card__image--small"><img src="./img/fc.png" alt=""></div>
+      <div class="cta-container">
+        <button class="cta cta__question-mark">
+          <i class="fas fa-question"></i>
+        </button>
+        <button class="cta cta__again">
+          <i class="fas fa-home"></i>
+          <span>Od nowa</span>
+        </button>
+        <button class="cta cta__back">
+          <i class="fas fa-arrow-left"></i>
+          <span>Wstecz</span>
+        </button>
+        <button class="cta cta__next">
+          <span>Następny</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
     </div>
-    <!-- <div class="form-view__image form-view__image--right">
-        <img class="form-view__image-img" src="./img/3.png" alt="">
-      </div> -->
-    <div class="cta-container">
-      <button class="cta cta__question-mark"><i class="fas fa-question"></i></button>
-      <button class="cta cta__again">
-        <i class="fas fa-home"></i>
-        <span>Od nowa</span>
-      </button>
-      <button class="cta cta__back">
-        <i class="fas fa-arrow-left"></i>
-        <span>Wstecz</span>
-      </button>
-      <button class="cta cta__next">
-        <span>Następny</span>
-        <i class="fas fa-arrow-right"></i>
-      </button>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

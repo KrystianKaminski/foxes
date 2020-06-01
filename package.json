@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css"
+    "scss": "node-sass --watch scss -o css",
+    "prefix": "postcss css/style.css --use=autoprefixer --map=false --output=css/prefix.css"
   },
+  "browserslist": ["last 5 versions"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KrystianKaminski/foxes.git"
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/KrystianKaminski/foxes#readme",
   "dependencies": {
+    "autoprefixer": "^9.8.0",
     "node-sass": "^4.14.1"
   }
 }
