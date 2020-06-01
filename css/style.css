@@ -473,7 +473,7 @@ sup {
     visibility: hidden;
     display: none; }
   to {
-    transform: translateY(0%);
+    transform: translateY(5%);
     visibility: visible;
     display: block; } }
 

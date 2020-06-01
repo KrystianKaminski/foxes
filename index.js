@@ -34,7 +34,7 @@ moveToNextSlide = () => {
 
 
   //need to be changed to slides.length later
-  if (currentSlide <= 5) {
+  if (currentSlide <= 4) {
     current = getCurrentSlide();
     currentDot = getCurrentDot();
 
